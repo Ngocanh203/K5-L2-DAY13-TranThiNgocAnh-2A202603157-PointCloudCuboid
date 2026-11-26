@@ -1,0 +1,65 @@
+#local-cvat-cuboid-tools {
+    position: fixed;
+    z-index: 1000;
+    left: 4.5rem;
+    bottom: 4rem;
+    width: min(28rem, calc(100vw - 6rem));
+    border-radius: 8px;
+    background: #151e2c;
+    color: #edf3fa;
+    border: 1px solid #41536a;
+    box-shadow: 0 5px 22px #10182744;
+    font: 14px/1.5 system-ui, sans-serif;
+}
+
+#local-cvat-cuboid-tools:not([open]) { width: auto; }
+
+#local-cvat-cuboid-tools summary {
+    cursor: pointer;
+    padding: .6rem .9rem;
+    font-weight: 650;
+}
+
+#local-cvat-cuboid-tools section {
+    padding: .75rem .9rem;
+    border-top: 1px solid #41536a;
+    max-height: min(55vh, 26rem);
+    overflow: auto;
+}
+
+#local-cvat-cuboid-tools .cuboid-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+#local-cvat-cuboid-tools p { margin: .6rem 0 0; }
+#local-cvat-cuboid-tools .cuboid-report { color: #cfdfef; overflow-wrap: anywhere; }
+#local-cvat-cuboid-tools ul { margin: .6rem 0 0; padding-left: 1.25rem; }
+#local-cvat-cuboid-tools li + li { margin-top: .45rem; }
+#local-cvat-cuboid-tools a { color: #a8d7ff; text-decoration: underline; }
+#local-cvat-cuboid-tools .cuboid-manual { margin-top: .75rem; border-top: 1px solid #41536a; }
+#local-cvat-cuboid-tools .cuboid-manual summary { padding: .55rem 0 0; }
+#local-cvat-cuboid-tools .cuboid-measure {
+    margin-top: .75rem;
+    padding: .65rem;
+    background: #1b293c;
+    border-radius: 5px;
+}
+#local-cvat-cuboid-tools .cuboid-measure select { color: #edf3fa; background: #243957; }
+#local-cvat-cuboid-tools .cuboid-measure table { width: 100%; margin: .55rem 0; border-collapse: collapse; }
+#local-cvat-cuboid-tools .cuboid-measure th,
+#local-cvat-cuboid-tools .cuboid-measure td { text-align: left; padding: .2rem; }
+#local-cvat-cuboid-tools .cuboid-measure canvas {
+    display: block;
+    width: min(100%, 340px);
+    height: auto;
+    margin: .55rem auto 0;
+    cursor: crosshair;
+}
+
+#local-cvat-cuboid-tools button {
+    padding: .35rem .7rem;
+    border: 1px solid #7aa2ce;
+    border-radius: 5px;
+    color: #fff;
+    background: #244b79;
+    cursor: pointer;
+}
+
+#local-cvat-cuboid-tools button:disabled { opacity: .55; cursor: wait; }

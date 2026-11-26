@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "CVAT Cuboid Tools",
+  "version": "1.0.4",
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "background": {"service_worker": "worker.js"},
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:8080/*", "http://127.0.0.1:8080/*"],
+      "js": ["measure.js", "panel.js"],
+      "css": ["panel.css"]
+    }
+  ]
+}
